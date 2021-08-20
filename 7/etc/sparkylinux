@@ -1,0 +1,4 @@
+Vendor: SparkyLinux
+Vendor-URL: https://sparkylinux.org/
+Bugs: debbugs:https://sourceforge.net/p/sparkylinux/tickets/
+Parent: Debian
