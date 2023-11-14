@@ -24,6 +24,9 @@ if [ "$1" = "uninstall" ]; then
 	if [ -f /etc/dpkg/origins/debian ]; then
 		ln -sf /etc/dpkg/origins/debian /etc/dpkg/origins/default
 	fi
+	if [ -f /etc/upstream-release/lsb-release ]; then
+		rm -f /etc/upstream-release/lsb-release
+	fi
 	if [ -f /usr/sbin/update-grub ] || [ -f /usr/sbin/update-grub2 ]; then
 		update-grub
 	fi
@@ -38,6 +41,10 @@ else
 		rm -f /etc/dpkg/origins/default
 	fi
 	ln -sf /etc/dpkg/origins/sparkylinux /etc/dpkg/origins/default
+	if [ ! -d /etc/upstream-release ]; then
+		mkdir -p /etc/upstream-release
+	fi
+	cp upstream-release/* /etc/upstream-release/
 	if [ -f /usr/sbin/update-grub ] || [ -f /usr/sbin/update-grub2 ]; then
 		update-grub
 	fi
