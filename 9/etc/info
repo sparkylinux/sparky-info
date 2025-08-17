@@ -1,0 +1,12 @@
+RELEASE=9
+CODENAME=Tiamat
+EDITION=sparky
+DESCRIPTION="SparkyLinux"
+#DESKTOP=
+DISTRIB_ID=SparkyLinux
+TOOLKIT=GTK
+NEW_FEATURES_URL=https://sparkylinux.org
+RELEASE_NOTES_URL=https://sparkylinux.org
+USER_GUIDE_URL=https://sparkylinux.org
+GRUB_TITLE="Sparky"
+
